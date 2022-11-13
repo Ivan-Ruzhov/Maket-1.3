@@ -397,7 +397,7 @@ html {
         justify-content: space-between;
         min-width: 1032px;
         display: flex;
-        height: auto;
+        min-height: 80px;
         flex-wrap: wrap;
     }
 
