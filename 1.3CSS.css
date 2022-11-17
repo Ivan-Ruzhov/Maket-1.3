@@ -148,12 +148,19 @@ html {
 .navigation {
     overflow-y: hidden;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .navigation::-webkit-scrollbar {
     width: 0;
     height: 0;
+
 }
+
+
+
+
+
 
 .navigation__list {
     min-height: 40px;
