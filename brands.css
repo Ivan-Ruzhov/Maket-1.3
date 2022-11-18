@@ -68,14 +68,14 @@ html {
     height: 60px;
 }
 
-.side-menu__header-container1 {
+.side-menu__header-container-one {
     margin-left: 0;
     display: flex;
     justify-content: space-evenly;
     width: 200px;
     align-items: center;
 }
-.side-menu__header-container2 {
+.side-menu__header-container-two {
     display: flex;
     margin-right: 24px;
 }
