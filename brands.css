@@ -82,7 +82,7 @@ html {
 
 
 .side-menu__button-burger {
-    background: url("image/1.4/header/burger.svg") no-repeat;
+    background: url("image/button/burger-close.svg") no-repeat;
     width: 40px;
     height: 40px;
     transition: 2s ease-in;
@@ -105,7 +105,7 @@ html {
 }
 
 .side-menu__button-search {
-    background: url("image/1.4/header/search.svg") no-repeat;
+    background: url("image/button/search.svg") no-repeat;
     width: 40px;
     height: 40px;
     transition: 2s ease-in;
@@ -147,7 +147,7 @@ html {
 }
 
 .side-menu__button-call {
-    background: url("image/1.4/footer/chat copy.svg") no-repeat;
+    background: url("image/button/call.svg") no-repeat;
     width: 40px;
     height: 40px;
     transition: 1s ease-in;
@@ -159,7 +159,7 @@ html {
 }
 
 .side-menu__button-chat {
-    background: url("image/1.4/footer/chat.svg") no-repeat;
+    background: url("image/button/chat.svg") no-repeat;
     width: 40px;
     height: 40px;
     transition: 1s ease-in;
@@ -172,7 +172,7 @@ html {
 }
 
 .side-menu__button-profile {
-    background: url("image/1.4/footer/profile.svg") no-repeat;
+    background: url("image/button/profile.svg") no-repeat;
     width: 40px;
     height: 40px;
     transition: 1s ease-in;
