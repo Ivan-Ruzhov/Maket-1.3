@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "TT Lakes Regular";
+    src: url("fonts/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes Medium";
+    src: url("fonts/TTLakes-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes Bold";
+    src: url("fonts/TTLakes-Bold.woff") format("woff");
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "TT Lakes", serif;
+}
+
+.label {
+    border-top: 1px solid #D9FFF5;
+    width: 320px;
+    height:80px;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+
+}
+
+.label__text {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 16px;
+}
+
+.swiper {
+    width: 100%;
+    height: 154px;
+}
+
+.swiper-wrapper {
+    margin-top: 16px;
+    margin-left: 16px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.swiper::after {
+    content: '';
+    width: 100px;
+    height: 81px;
+    background:red;
+    position: absolute;
+    top: 10px;
+    left: -100px;
+}
+
+.swiper-slide {
+    display: flex;
+    width: 240px;
+    height: 72px;
+
+}
+.swiper-slide__link {
+    width: 240px;
+    height: 72px;
+}
+
+.swiper-slide__link-lenovo {
+    background: url("image/links/lenovo.png") no-repeat;
+}
+
+.swiper-slide__link-samsung {
+    background: url("image/links/samsung.png") no-repeat;
+}
+
+.swiper-slide__link-apple {
+    background: url("image/links/apple.png") no-repeat;
+}
+
+.swiper-slide__link-viewSonic {
+    background: url("image/links/viewSonic.png") no-repeat;
+}
+
+.swiper-slide__link-bosch {
+    background: url("image/links/bosch.png") no-repeat;
+}
+
+.swiper-slide__link-hp {
+    background: url("image/links/hp.png") no-repeat;
+}
+
+.swiper-slide__link-acer {
+    background: url("image/links/acer.png") no-repeat;
+}
+
+.swiper-slide__link-sony {
+    background: url("image/links/acer.png") no-repeat;
+}
+
+
+.swiper-pagination {
+    transform: translateY(-30px);
+    width: 200px;
+    height: 20px;
+    color: #B5B6BC;
+}
+.swiper__button-hidden {
+    display: none;
+}
+
