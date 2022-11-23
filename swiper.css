@@ -20,21 +20,50 @@
     font-family: "TT Lakes", serif;
 }
 
-.label {
-    border-top: 1px solid #D9FFF5;
-    width: 320px;
-    height:80px;
-    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex-basis: 100%;
+    margin: 0;
+}
 
+.label {
+    background: linear-gradient(270deg, #FFFFFF  0%,  #F8F8F8 98.61%);
+    border-top: 1px solid #D9FFF5;
+    height: 80px;
+    width: 100%;
 }
 
 .label__text {
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 24px;
-    letter-spacing: 0.2px;
     margin: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    width: 288px;
+    font-weight: 400;
+}
+
+.brands {
+    width: 100%;
+    height:  154px;
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F2;
+    position: relative;
+}
+
+.brands::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    width: 24px;
+    height: 81px;
+    z-index: 100;
 }
 
 .swiper {
@@ -43,76 +72,180 @@
 }
 
 .swiper-wrapper {
-    margin-top: 16px;
-    margin-left: 16px;
-    height: 70px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
-}
-
-.swiper::after {
-    content: '';
-    width: 100px;
-    height: 81px;
-    background:red;
-    position: absolute;
-    top: 10px;
-    left: -100px;
+    padding: 16px 0 0 16px;
+    height: 90px;
 }
 
 .swiper-slide {
+    max-width: 240px;
+    height: 72px;
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #FFFFFF;
+}
+
+.swiper-slide__link {
     display: flex;
     width: 240px;
     height: 72px;
-
-}
-.swiper-slide__link {
-    width: 240px;
-    height: 72px;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
 .swiper-slide__link-lenovo {
-    background: url("image/links/lenovo.png") no-repeat;
+    background: url("image/links/lenovo.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-samsung {
-    background: url("image/links/samsung.png") no-repeat;
+    background: url("image/links/samsung.png") no-repeat 10% 50%,
+url("image/links/arrow.svg") no-repeat 90% 50%;
 }
 
 .swiper-slide__link-apple {
-    background: url("image/links/apple.png") no-repeat;
+    background: url("image/links/apple.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-viewSonic {
-    background: url("image/links/viewSonic.png") no-repeat;
+    background: url("image/links/viewSonic.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-bosch {
-    background: url("image/links/bosch.png") no-repeat;
+    background: url("image/links/bosch.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-hp {
-    background: url("image/links/hp.png") no-repeat;
+    background: url("image/links/hp.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-acer {
-    background: url("image/links/acer.png") no-repeat;
+    background: url("image/links/acer.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
 .swiper-slide__link-sony {
-    background: url("image/links/acer.png") no-repeat;
+    background: url("image/links/sony.png") no-repeat 10% 50%,
+    url("image/links/arrow.svg") no-repeat 90% 50%;;
 }
 
-
-.swiper-pagination {
-    transform: translateY(-30px);
-    width: 200px;
-    height: 20px;
-    color: #B5B6BC;
-}
-.swiper__button-hidden {
+.button-hidden {
     display: none;
 }
+
+.swiper-pagination {
+    transform: translateY(-20px);
+}
+
+@media (min-width: 768px) {
+    .container {
+        height: max-content;
+    }
+
+    .label {
+        min-width: 768px;
+        height: 56px;
+    }
+
+    .label__text {
+        min-width: 338px;
+        margin: 16px 0 16px 24px;
+    }
+
+    .brands {
+        min-width: 768px;
+        height: 400px;
+    }
+
+    .swiper {
+        min-width: 768px;
+        height: 400px;
+    }
+
+    .swiper-wrapper {
+        min-width: 768px;
+        flex-wrap: wrap;
+        height: max-content;
+    }
+
+    .swiper-slide {
+        margin-right: 24px;
+        margin-bottom: 16px;
+        width: 224px;
+
+    }
+
+    .swiper-slide__link {
+       width: 224px;
+    }
+
+
+    .swiper-slide-hidden-one {
+        display: none;
+    }
+
+    .button-hidden {
+        display: flex;
+        position: relative;
+        border: none;
+        background: #F2F2F2;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        margin-left: 57px;
+
+        cursor: pointer;
+    }
+
+    .button:before {
+        position: absolute;
+        left: -25px;
+        content: url("image/button-before/read.svg");
+    }
+    .arrow-up:before {
+        position: absolute;
+        left: -25px;
+        content: url("image/button-before/read.svg");
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 1120px) {
+    .container {
+        width: 1120px;
+        margin: 0 auto;
+    }
+
+    .label__text {
+        margin-left: 32px;
+    }
+
+    .swiper-wrapper {
+        padding-left: 32px;
+    }
+
+    .swiper-slide {
+        width: 240px;
+        margin-right: 32px;
+    }
+
+    .swiper-slide__link {
+        width: 240px;
+    }
+
+    .button {
+        margin-left: 63px;
+    }
+}
+
+
 
