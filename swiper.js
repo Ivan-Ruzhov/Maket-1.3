@@ -12,8 +12,8 @@ if (document.documentElement.clientWidth < 768) {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 2,
-                spaceBetween: 20
+                slidesPerView: 1.3,
+                spaceBetween: 16
             },
             // when window width is >= 480px
             480: {
@@ -30,15 +30,14 @@ if (document.documentElement.clientWidth < 768) {
 }
 
 if (document.documentElement.clientWidth >= 768) {
-    let elem1 = document.getElementById('stylesheet1')
+    const elem1 = document.querySelector('link')
     elem1.parentNode.removeChild(elem1);
-    let elem2 = document.getElementById('swiper')
+    const elem2 = document.querySelector('script')
     elem2.parentNode.removeChild(elem2);
 }
-let button = document.querySelector('.arrow-up');
+let button = document.querySelector('.button');
 let listItems = document.querySelectorAll('.swiper-slide-hidden-one');
-let buttonclick = false;
-
+let buttonClick = false;
 if (document.documentElement.clientWidth >= 1120) {
     listItems[0].classList.remove('swiper-slide-hidden-one');
     listItems[1].classList.remove('swiper-slide-hidden-one');
@@ -46,21 +45,23 @@ if (document.documentElement.clientWidth >= 1120) {
 }
 button.addEventListener('click', function () {
     for (let i = 0; i < listItems.length; i++) {
-        if (buttonclick) {
+        if (buttonClick) {
             listItems[i].classList.add('swiper-slide-hidden-one');
         } else {
             listItems[i].classList.remove('swiper-slide-hidden-one');
         }
     }
-    buttonclick = !buttonclick;
-    if (buttonclick) {
-        button.textContent = "Скрыть";
-        button.classList.remove('arrow-down')
-        button.classList.add('arrow-up')
-    } else {
-        button.textContent = "Показать все";
+
+    if(button.classList.contains("arrow-up")) {
+        button.textContent = 'Показать все'
         button.classList.remove('arrow-up')
         button.classList.add('arrow-down')
+    } else if (button.classList.contains("arrow-down")) {
+        button.textContent = 'Скрыть'
+        button.classList.add('arrow-up')
+        button.classList.remove('arrow-down')
     }
-    return buttonclick;
+    buttonClick = !buttonClick;
+    return buttonClick;
+
 });
