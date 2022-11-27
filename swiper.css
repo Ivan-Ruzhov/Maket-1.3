@@ -69,13 +69,14 @@
 .swiper {
     width: 100%;
     height: 154px;
+    padding: 16px 0 0 16px;
 }
 
 .swiper-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 16px 0 0 16px;
+
     height: 90px;
 }
 
@@ -161,24 +162,27 @@
 
     .brands {
         min-width: 768px;
-        height: 400px;
+        height: max-content;
     }
 
     .swiper {
         min-width: 768px;
-        height: 400px;
+        height: max-content;
+        padding: 24px;
     }
 
     .swiper-wrapper {
         min-width: 768px;
         flex-wrap: wrap;
         height: max-content;
-       justify-content: space-evenly;
+        row-gap: 16px;
+        column-gap: 24px;
+        padding-bottom: 24px;
+        margin: 0 auto;
     }
 
     .swiper-slide {
-        margin-right: 24px;
-        margin-bottom: 16px;
+
        flex-basis: 224px;
 
     }
@@ -229,14 +233,23 @@
         margin-left: 32px;
     }
 
+    .swiper {
+        padding-bottom: 34px;
+
+    }
+
     .swiper-wrapper {
-        padding-left: 32px;
+        padding-left: 16px;
+        flex-basis: 1120px;
+
         justify-content: flex-start;
+        row-gap: 16px;
+        column-gap: 32px;
     }
 
     .swiper-slide {
         width: 240px;
-        margin-right: 32px;
+
     }
 
     .swiper-slide__link {
