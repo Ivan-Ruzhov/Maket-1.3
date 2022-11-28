@@ -30,12 +30,12 @@ if (document.documentElement.clientWidth < 768) {
 }
 
 if (document.documentElement.clientWidth >= 768) {
-    const elem1 = document.querySelector('link')
+    const elem1 = document.querySelector('#stylesheet1')
     elem1.parentNode.removeChild(elem1);
-    const elem2 = document.querySelector('script')
+    const elem2 = document.querySelector('#swiper')
     elem2.parentNode.removeChild(elem2);
 }
-let button = document.querySelector('.button');
+const button = document.querySelector('.button');
 let listItems = document.querySelectorAll('.swiper-slide-hidden-one');
 let buttonClick = false;
 if (document.documentElement.clientWidth >= 1120) {
