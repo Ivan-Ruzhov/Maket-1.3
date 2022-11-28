@@ -76,7 +76,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
     height: 90px;
 }
 
@@ -168,29 +167,26 @@
     .swiper {
         min-width: 768px;
         height: max-content;
-        padding: 24px;
+        padding: 24px 0 24px 0;
     }
 
     .swiper-wrapper {
-        min-width: 768px;
+        max-width: 768px;
         flex-wrap: wrap;
         height: max-content;
-        row-gap: 16px;
-        column-gap: 24px;
-        padding-bottom: 24px;
         margin: 0 auto;
+        column-gap: 24px;
+        row-gap: 16px;
+        padding-left: 24px;
     }
 
     .swiper-slide {
-
-       flex-basis: 224px;
-
+        flex-basis: 224px;
     }
 
     .swiper-slide__link {
         flex-basis: 224px;
     }
-
 
     .swiper-slide-hidden-one {
         display: none;
@@ -207,6 +203,7 @@
         letter-spacing: -0.2px;
         color: #1B1C21;
         margin-left: 57px;
+        margin-top: 24px;
         cursor: pointer;
     }
 
@@ -239,10 +236,9 @@
     }
 
     .swiper-wrapper {
-        padding-left: 16px;
+        max-width: 1120px;
+        padding-left: 32px;
         flex-basis: 1120px;
-
-        justify-content: flex-start;
         row-gap: 16px;
         column-gap: 32px;
     }
