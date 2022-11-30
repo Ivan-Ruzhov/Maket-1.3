@@ -27,7 +27,7 @@ if (document.documentElement.clientWidth < 768) {
 
 const button = document.querySelector('.button');
 let listItems = document.querySelectorAll('.swiper-slide-hidden-one');
-let buttonClick = false;
+let buttonClick = true;
 if (document.documentElement.clientWidth >= 1120) {
     listItems[0].classList.remove('swiper-slide-hidden-one');
     listItems[1].classList.remove('swiper-slide-hidden-one');
@@ -36,8 +36,6 @@ if (document.documentElement.clientWidth >= 1120) {
 button.addEventListener('click', function () {
     for (let i = 0; i < listItems.length; i++) {
         if (buttonClick) {
-            listItems[i].classList.toggle('swiper-slide-hidden-one');
-        } else {
             listItems[i].classList.toggle('swiper-slide-hidden-one');
         }
     }
@@ -51,7 +49,6 @@ button.addEventListener('click', function () {
         button.classList.add('arrow-up')
         button.classList.remove('arrow-down')
     }
-    buttonClick = !buttonClick;
     return buttonClick;
 
 });
