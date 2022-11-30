@@ -35,7 +35,7 @@ if (document.documentElement.clientWidth >= 1120) {
 }
 button.addEventListener('click', function () {
     for (let i = 0; i < listItems.length; i++) {
-        if (buttonClick) {
+        if (buttonClick === true) {
             listItems[i].classList.toggle('swiper-slide-hidden-one');
         }
     }
