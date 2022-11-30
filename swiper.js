@@ -1,6 +1,5 @@
 if (document.documentElement.clientWidth < 768) {
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
         direction: 'horizontal',
         loop: true,
         pagination: {
@@ -10,17 +9,14 @@ if (document.documentElement.clientWidth < 768) {
         spaceBetween: 16,
         slidesPerView: 1.3,
         breakpoints: {
-            // when window width is >= 320px
             320: {
                 slidesPerView: 1.3,
                 spaceBetween: 16
             },
-            // when window width is >= 480px
             480: {
                 slidesPerView: 2,
                 spaceBetween: 30
             },
-            // when window width is >= 640px
             640: {
                 slidesPerView: 3,
                 spaceBetween: 80
@@ -29,12 +25,6 @@ if (document.documentElement.clientWidth < 768) {
     });
 }
 
-if (document.documentElement.clientWidth >= 768) {
-    const elem1 = document.querySelector('#stylesheet1')
-    elem1.parentNode.removeChild(elem1);
-    const elem2 = document.querySelector('#swiper')
-    elem2.parentNode.removeChild(elem2);
-}
 const button = document.querySelector('.button');
 let listItems = document.querySelectorAll('.swiper-slide-hidden-one');
 let buttonClick = false;
@@ -46,9 +36,9 @@ if (document.documentElement.clientWidth >= 1120) {
 button.addEventListener('click', function () {
     for (let i = 0; i < listItems.length; i++) {
         if (buttonClick) {
-            listItems[i].classList.add('swiper-slide-hidden-one');
+            listItems[i].classList.toggle('swiper-slide-hidden-one');
         } else {
-            listItems[i].classList.remove('swiper-slide-hidden-one');
+            listItems[i].classList.toggle('swiper-slide-hidden-one');
         }
     }
 
